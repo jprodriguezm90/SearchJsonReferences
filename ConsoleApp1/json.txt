@@ -16,6 +16,7 @@
     "ogImage": ""
   },
   "id": "/testing/zoetistesting/erickdevtest",
+  "id2": "/testing/zoetistesting/erickdevtestwww.zoetisus.com",
   "route": {
     "path": "/testing/zoetistesting/erickdevtest",
     "exact": true,
