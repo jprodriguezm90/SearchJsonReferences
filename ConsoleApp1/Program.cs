@@ -18,48 +18,53 @@ namespace ConsoleApp1
             var enumerable = l.AsEnumerable();
 
             var item = enumerable.GetEnumerator();
+            var result = "";
 
             while (item.MoveNext())
             {
                 var itemc = item.Current;
-                searchWord(itemc, "xxx");
+                result += searchWord(itemc, "www.zoetisus.com");
             }
             Console.ReadLine();
 
         }
 
-        private static KeyValuePair<string, string> searchWord(JToken itemc, string searchKey)
+        private static string searchWord(JToken itemc, string searchKey)
         {
+            var result = "";
             var childrens = itemc.Children();
             if (childrens.ToList().Count == 0)
             {
-                return new KeyValuePair<string,string>("f", "");
+                return result;
             }
 
             var enumerator = childrens.GetEnumerator();
             while (enumerator.MoveNext())
             {
                 var item = enumerator.Current;
-                var itemChildrens = item.Children().ToList();
-                var count = itemChildrens.Count;
-                var i = itemChildrens.First();
-                if (i.HasValues)
+                if (item.HasValues)
                 {
-                    return searchWord(enumerator.Current,searchKey);
-                }
-                else {
-                    var values = item.ToArray();
-                    if (values != null && values.Length > 0) {
-                        var found = values[0].ToString().Contains(searchKey);
-                        if (found) { 
-                            //return parent
+                    var itemChildrens = item.Children().ToList();
+                    var i = itemChildrens.First();
+                    if (i.HasValues)
+                    {
+                        result += searchWord(enumerator.Current, searchKey);
+                    }
+                    else
+                    {
+                        var values = item.ToArray();
+                        if (values != null && values.Length > 0)
+                        {
+                            var found = values[0].ToString().Contains(searchKey);
+                            if (found)
+                            {
+                                result += item.Parent.ToString();
+                            }
                         }
                     }
-                    Console.WriteLine(":D");
                 }
-              
             }
-            return new KeyValuePair<string, string>("blah","blah");
+            return result;
         }
 
         public static string getJSON()
