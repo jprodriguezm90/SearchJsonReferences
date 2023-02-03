@@ -13,11 +13,7 @@ namespace ConsoleApp1
             JObject obj = JObject.Parse(getJSON());
 
             var l = obj.Children();
-            var jtokenCount = l.ToList().Count;
-
-            var enumerable = l.AsEnumerable();
-
-            var item = enumerable.GetEnumerator();
+            var item = l.AsEnumerable().GetEnumerator();
             List<ComponentJson> result = null;
 
             while (item.MoveNext())
