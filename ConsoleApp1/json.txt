@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "title": "xxx.com",
+    "description": "",
+    "noIndex": false,
+    "type": null,
+    "author": "",
+    "publishedTime": null,
+    "image": "",
+    "taggingInput": "",
+    "keywords": "",
+    "ogDescription": "",
+    "ogKeyword": "",
+    "customTag": null,
+    "ogTitle": "",
+    "ogImage": ""
+  },
+  "id": "/testing/zoetistesting/erickdevtest",
+  "route": {
+    "path": "/testing/zoetistesting/erickdevtest",
+    "exact": true,
+    "strict": false,
+    "priority": null,
+    "auth": {
+      "required": false,
+      "returnAfterLogin": false,
+      "userlevelAccess": []
+    },
+    "register": {
+      "returnAfterRegister": false
+    }
+  },
+  "title": "",
+  "analytics": null,
+  "GTMDataLayerTriggers": {
+    "eventName": "meta-name",
+    "eventCategory": "meta-cat",
+    "eventAction": {
+      "eventAction": "Dynamic",
+      "layout": "meta-layout"
+    },
+    "eventLabel": {
+      "eventLabel": "Dynamic",
+      "layout": "meta-label"
+    }
+  },
+  "Hybris": null,
+  "components": [
+    {
+      "name": "Breadcrumb",
+      "props": {
+        "hideBreadcrumb": false,
+        "breadCrumb": [
+          {
+            "label": "Home",
+            "to": "",
+            "target": null,
+            "modalid": null,
+            "ispopup": null,
+            "userlevelAccess": null
+          },
+          {
+            "label": "Testing",
+            "to": "",
+            "target": null,
+            "modalid": null,
+            "ispopup": null,
+            "userlevelAccess": null
+          },
+          {
+            "label": "zoetistesting",
+            "to": "",
+            "target": null,
+            "modalid": null,
+            "ispopup": null,
+            "userlevelAccess": null
+          },
+          {
+            "label": "",
+            "to": "/testing/zoetistesting/erickdevtest",
+            "target": null,
+            "modalid": null,
+            "ispopup": null,
+            "userlevelAccess": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "FeaturedHero",
+      "props": {
+        "contentType": "VideoBanner",
+        "videoBanner": {
+          "type": "brightCoveVideo",
+          "videoType": {
+            "coverImage": null,
+            "renderType": "Iframe",
+            "videoId": "6116779877001",
+            "videoEmbedd": "//players.brightcove.net/2342494722001/xpfwQjw55_default/index.html?videoId=6116779877001",
+            "duration": ""
+          }
+        },
+        "theme": "",
+        "layout": ""
+      }
+    },
+    {
+      "name": "ColumnContainer",
+      "props": {
+        "className": "",
+        "columns": [
+          {
+            "config": {
+              "xs": null,
+              "sm": null,
+              "md": "12",
+              "lg": null,
+              "xl": null,
+              "className": null
+            },
+            "children": [
+              {
+                "name": "VideoLink",
+                "props": {
+                  "theme": "none",
+                  "items": [
+                    {
+                      "type": "localVideo",
+                      "videoType": {
+                        "coverimg": null,
+                        "videoembedd": "",
+                        "title": "www.zoetisus.com",
+                        "description": "",
+                        "duration": "",
+                        "videoDisclaimer": {
+                          "modalid": "",
+                          "ispopup": false,
+                          "isVideoDisclaimer": false,
+                          "isVideoInlineDisclaimer": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "VideoInlinePlayer",
+                "props": {
+                  "className": "full-width",
+                  "label": "",
+                  "type": "brightCoveVideo",
+                  "videoType": {
+                    "videoId": "",
+                    "duration": "",
+                    "renderType": "embed",
+                    "dataAccount": "",
+                    "dataPlayer": "",
+                    "dataVideoId": "",
+                    "videoDisclaimer": {
+                      "modalid": "",
+                      "ispopup": false,
+                      "isVideoDisclaimer": false,
+                      "isVideoInlineDisclaimer": false
+                    }
+                  }
+                }
+              },
+              {
+                "name": "MaincolTextBlockImageVideo",
+                "props": {
+                  "theme": "none",
+                  "className": "none",
+                  "mediaDescription": [
+                    {
+                      "type": "image",
+                      "videoType": {
+                        "imgSrc": null,
+                        "header": "",
+                        "text": "",
+                        "cta": null
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "config": {
+              "xs": null,
+              "sm": null,
+              "md": "0",
+              "lg": null,
+              "xl": null,
+              "className": null
+            },
+            "children": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Disclaimer",
+      "props": {
+        "addDisclaimer": false,
+        "showCookieBasedforUnauthorizedUser": false,
+        "hideDisclaimerFor": [],
+        "header": null,
+        "body": null,
+        "buttonLabel": null,
+        "declineButtonLabel": null,
+        "declineRedirectUrl": null,
+        "widgetId": null
+      }
+    }
+  ]
+}
